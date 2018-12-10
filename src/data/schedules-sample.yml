@@ -11,5 +11,7 @@
   tickets_on_the_day_information_url: https://当日券の詳細URL
   official_site_url: http://公演のURL
   actors:
-    - A
-    - B
+    -
+      name: A
+    -
+      name: B
