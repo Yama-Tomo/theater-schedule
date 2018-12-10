@@ -9,7 +9,7 @@
     "groupName": "all dependencies"
   },
   "patch": {
-    "automerge": true,
+    "automerge": true
   },
   "lockFileMaintenance": {
     "enabled": true,
