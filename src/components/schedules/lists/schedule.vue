@@ -16,8 +16,7 @@
     .bold.font-size-small {{ recess }}
   .column.is-4-desktop.is-12-mobile.is-4-tablet.font-size-small
     div {{ ticketOnTheDay }}
-      template(v-if="ticketsOnTheDayInformationUrl")
-        a(:href="ticketsOnTheDayInformationUrl") 詳しくはこちら
+      a(:href="ticketsOnTheDayInformationUrl" class="more" v-if="ticketsOnTheDayInformationUrl") 詳しくはこちら
     div(v-if="officialSiteUrl")
       a(:href="officialSiteUrl") 公演公式サイト
 </template>
@@ -108,6 +107,10 @@ export default class extends Vue {
     top: 3px;
     position: relative;
     color: $main-font-color;
+  }
+
+  .more {
+    margin-left: 5px;
   }
 }
 
