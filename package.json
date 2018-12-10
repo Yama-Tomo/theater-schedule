@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --no-fix || true",
+    "lint:commit": ".scripts/lint_when_precommit",
     "dev": "nuxt",
     "gen": "nuxt generate",
     "build": "nuxt build",
     "start": "nuxt start"
   },
+  "pre-commit": [
+    "lint:commit"
+  ],
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
@@ -17,6 +21,7 @@
   },
   "dependencies": {
     "@types/node": "^10.11.2",
+    "bulma": "^0.7.2",
     "nuxt": "^2.0.0",
     "nuxt-class-component": "^1.2.1",
     "nuxt-property-decorator": "^1.2.0",
@@ -27,8 +32,12 @@
     "@vue/cli-plugin-typescript": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
     "hard-source-webpack-plugin": "github:chronweigle/hard-source-webpack-plugin#add-prefix",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.4.1",
     "node-sass": "^4.9.0",
+    "pre-commit": "^1.2.2",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.0.1",
     "typescript": "^3.1",
     "vue-mixin-decorator": "^1.0.0",

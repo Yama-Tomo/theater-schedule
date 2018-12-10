@@ -16,4 +16,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+*.iml
 
+# data
+src/data/schedules.*
