@@ -29,6 +29,18 @@ export default class extends Mixins<StoreHelperMixin>(StoreHelperMixin) {
     actions.fetchInitialState(undefined);
   }
 
+  public head() {
+    const description = '現在公演中の東京の主要な公演の上演時間をわかる範囲でまとめています。';
+
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'keyword', name: 'keyword', content: '上演時間 舞台 演劇 ミュージカル 歌舞伎 まとめ' },
+        { hid: 'og:keyword', name: 'og:keyword', content: description },
+      ],
+    };
+  }
+
   get state() {
     return this.getState(schedules);
   }

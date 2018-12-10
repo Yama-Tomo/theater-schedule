@@ -13,19 +13,10 @@ module.exports = {
   },
   srcDir: 'src',
   head: {
-    title: 'nuxt.js with typescript',
+    title: '上演時間まとめ｜corolife',
     meta: [
       { charset: 'utf-8' },
-      {
-        name: 'viewport',
-        content:
-          'width=device-width, initial-scale=1'
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Nuxt.js project'
-      }
+      { name: 'viewport', content: 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' },
     ],
     link: [
       {
