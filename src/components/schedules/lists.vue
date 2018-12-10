@@ -37,7 +37,7 @@ export default class extends Vue {
           schedule.theater.toLowerCase().indexOf(word) >= 0 ||
           schedule.station.toLowerCase().indexOf(word) >= 0 ||
           (schedule.ticketsOnTheDay && schedule.ticketsOnTheDay.toLowerCase().indexOf(word) >= 0) ||
-          schedule.actors.some((actor) => actor.name.toLocaleLowerCase().indexOf(word) >= 0);
+          schedule.actors.some((actor) => actor.name.toLowerCase().indexOf(word) >= 0);
       });
     }
     return this.state.schedules;
