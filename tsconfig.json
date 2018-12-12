@@ -23,8 +23,7 @@
       "dom.iterable",
       "scripthost"
     ],
-    "skipLibCheck": true,
-    "strictFunctionTypes": false
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
