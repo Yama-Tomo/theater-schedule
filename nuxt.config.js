@@ -13,7 +13,7 @@ module.exports = {
   },
   srcDir: 'src',
   head: {
-    title: '上演時間まとめ｜corolife',
+    title: '上演時間情報まとめ｜corolife',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' },
