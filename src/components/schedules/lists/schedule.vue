@@ -7,7 +7,7 @@
        span.name.bold
          img(src="~/assets/images/schedules/pin.svg" class="pin")
          template(v-if="theaterSiteUrl")
-           a(:href="theaterSiteUrl") {{ theater }}
+           a(:href="theaterSiteUrl" target="_blank") {{ theater }}
          template(v-else)
            | {{ theater }}
        span.station [{{ station }}]
@@ -16,9 +16,9 @@
     .bold.font-size-small {{ recess }}
   .column.is-4-desktop.is-12-mobile.is-4-tablet.font-size-small
     div {{ ticketOnTheDay }}
-      a(:href="ticketsOnTheDayInformationUrl" class="more" v-if="ticketsOnTheDayInformationUrl") 詳しくはこちら
+      a(:href="ticketsOnTheDayInformationUrl" class="more" v-if="ticketsOnTheDayInformationUrl" target="_blank") 詳しくはこちら
     div(v-if="officialSiteUrl")
-      a(:href="officialSiteUrl") 公演公式サイト
+      a(:href="officialSiteUrl" target="_blank") 公演公式サイト
 </template>
 
 <script lang="ts">
