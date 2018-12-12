@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@nuxtjs/google-analytics": "^2.0.2",
+    "@nuxtjs/google-analytics": "2.0.2",
     "@types/node": "10.12.12",
     "bulma": "0.7.2",
     "nuxt": "2.3.4",
