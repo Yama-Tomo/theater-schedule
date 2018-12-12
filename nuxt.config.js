@@ -48,5 +48,10 @@ module.exports = {
   },
   modules: [
     '~/modules/typescript.js',
+    ...(process.env.GOOGLE_ANALYTICS_ID ? [[
+         '@nuxtjs/google-analytics', {
+            id: process.env.GOOGLE_ANALYTICS_ID
+          }
+        ]] : []),
   ],
 }
