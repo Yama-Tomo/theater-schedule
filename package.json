@@ -33,7 +33,7 @@
     "@vue/cli-plugin-babel": "3.2.0",
     "@vue/cli-plugin-typescript": "3.2.0",
     "@vue/cli-service": "3.2.0",
-    "hard-source-webpack-plugin": "0.13.0",
+    "hard-source-webpack-plugin": "0.13.1",
     "json-loader": "0.5.7",
     "mini-css-extract-plugin": "0.4.5",
     "node-sass": "4.11.0",
