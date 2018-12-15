@@ -30,17 +30,20 @@ export default class extends Vue {
   @Prop(Object) public state!: State;
 
   get schedules(): Schedule[] {
-    if (this.state.searchWord) {
-      const word = this.state.searchWord.toLowerCase();
-      return this.state.schedules.filter((schedule) => {
-        return schedule.name.toLowerCase().indexOf(word) >= 0 ||
-          schedule.theater.toLowerCase().indexOf(word) >= 0 ||
-          schedule.station.toLowerCase().indexOf(word) >= 0 ||
-          (schedule.ticketsOnTheDay && schedule.ticketsOnTheDay.toLowerCase().indexOf(word) >= 0) ||
-          schedule.actors.some((actor) => actor.name.toLowerCase().indexOf(word) >= 0);
-      });
+    if (!this.state.searchWord) {
+      return this.state.schedules;
     }
-    return this.state.schedules;
+
+    const word = this.state.searchWord.toLowerCase();
+    const toFilterWord = (str: string) => str.toLowerCase().replace(/\/| |・|／/g, '');
+
+    return this.state.schedules.filter((schedule) => {
+      return toFilterWord(schedule.name).indexOf(word) >= 0 ||
+        toFilterWord(schedule.theater).indexOf(word) >= 0 ||
+        toFilterWord(schedule.station).indexOf(word) >= 0 ||
+        (schedule.ticketsOnTheDay && toFilterWord(schedule.ticketsOnTheDay).indexOf(word) >= 0) ||
+        schedule.actors.some((actor) => toFilterWord(actor.name).indexOf(word) >= 0);
+    });
   }
 }
 </script>
