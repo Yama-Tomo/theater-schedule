@@ -53,5 +53,11 @@ module.exports = {
             id: process.env.GOOGLE_ANALYTICS_ID
           }
         ]] : []),
+    ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
   ],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: process.env.HOSTNAME,
+    generate: true,
+  },
 }
