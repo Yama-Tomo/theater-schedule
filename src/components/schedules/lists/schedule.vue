@@ -5,7 +5,6 @@
     .bold.font-size-middle {{ name }}
     .theater
        span.name.bold
-         img(src="~/assets/images/schedules/pin.svg" class="pin")
          template(v-if="theaterSiteUrl")
            a(:href="theaterSiteUrl" target="_blank") {{ theater }}
          template(v-else)
@@ -100,13 +99,6 @@ export default class extends Vue {
     .name {
       margin-right: 5px;
     }
-  }
-
-  .pin {
-    width: 1.1rem;
-    top: 3px;
-    position: relative;
-    color: $main-font-color;
   }
 
   .more {
