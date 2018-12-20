@@ -2,8 +2,8 @@
 .columns.is-mobile.is-multiline.schedule
   .column.is-2-desktop.is-12-mobile.is-2-tablet {{ date }}
   .column.is-4-desktop.is-8-mobile.is-4-tablet.second
-    .bold.font-size-middle {{ name }}
-    .theater
+    h2.bold.font-size-middle 『{{ name }}』
+    h3.theater
        span.name.bold
          template(v-if="theaterSiteUrl")
            a(:href="theaterSiteUrl" target="_blank") {{ theater }}
@@ -11,12 +11,12 @@
            | {{ theater }}
        span.station [{{ station }}]
   .column.is-2-desktop.is-4-mobile.is-2-tablet.third
-    .bold {{ runningTime }}
-    .bold.font-size-small {{ recess }}
+    p.bold {{ runningTime }}
+    p.bold.font-size-small {{ recess }}
   .column.is-4-desktop.is-12-mobile.is-4-tablet.font-size-small
-    div {{ ticketOnTheDay }}
+    p {{ ticketOnTheDay }}
       a(:href="ticketsOnTheDayInformationUrl" class="more" v-if="ticketsOnTheDayInformationUrl" target="_blank") 詳しくはこちら
-    div(v-if="officialSiteUrl")
+    p(v-if="officialSiteUrl")
       a(:href="officialSiteUrl" target="_blank") 公演公式サイト
 </template>
 
@@ -87,6 +87,17 @@ export default class extends Vue {
 @import "~assets/scss/_variables";
 
 .columns {
+  h2, h3 {
+    color: $main-font-color;
+    font-size: inherit;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
   .font-size-middle {
     font-size: 1rem;
   }
