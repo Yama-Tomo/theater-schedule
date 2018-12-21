@@ -6,6 +6,7 @@ module.exports = {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`,
     isDev,
+    twitterEmbeddedUrl: process.env.TWITTER_EMBEDDED_URL ? process.env.TWITTER_EMBEDDED_URL : ''
   },
   server: {
     port,

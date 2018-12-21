@@ -5,6 +5,7 @@
     time {{ today }}
   Search(:actions="actions")
   Lists(:state="state")
+  Twitter(:twitter-embedded-url="twitterEmbeddedUrl" v-if="twitterEmbeddedUrl")
 </template>
 
 <script lang="ts">
@@ -17,12 +18,14 @@ import { Actions } from '~/store/schedules/actions';
 import Overview from '~/components/schedules/overview.vue';
 import Search from '~/components/schedules/search.vue';
 import Lists from '~/components/schedules/lists.vue';
+import Twitter from '~/components/schedules/twitter.vue';
 
 @Component({
   components: {
     Overview,
     Search,
     Lists,
+    Twitter,
   },
 })
 export default class extends Mixins<StoreHelperMixin>(StoreHelperMixin) {
@@ -44,6 +47,10 @@ export default class extends Mixins<StoreHelperMixin>(StoreHelperMixin) {
         { hid: 'og:keyword', name: 'og:keyword', content: description },
       ],
     };
+  }
+
+  get twitterEmbeddedUrl(): string|undefined {
+    return process.env.twitterEmbeddedUrl;
   }
 
   get today(): string {
