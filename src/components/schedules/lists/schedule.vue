@@ -87,6 +87,8 @@ export default class extends Vue {
 @import "~assets/scss/_variables";
 
 .columns {
+  margin-bottom: 0px;
+
   h2, h3 {
     color: $main-font-color;
     font-size: inherit;
