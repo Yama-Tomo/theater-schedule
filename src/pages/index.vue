@@ -35,7 +35,7 @@ export default class extends Mixins<StoreHelperMixin>(StoreHelperMixin) {
   }
 
   public head() {
-    const description = '現在公演中の東京の主要な公演の上演時間をわかる範囲でまとめています。';
+    const description = '現在公演中の東京の主要な舞台／演劇／ミュージカル／歌舞伎の上演時間をわかる範囲でまとめています。';
 
     return {
       link: [
