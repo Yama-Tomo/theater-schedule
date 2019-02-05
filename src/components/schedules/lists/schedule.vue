@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { Schedule } from '../../../store/schedules/state/schedule';
+import { Schedule } from '../../../store_modules/schedules/state/schedule';
 
 @Component
 export default class extends Vue {

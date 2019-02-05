@@ -17,8 +17,8 @@ section
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { State } from '~/store/schedules/state';
-import { Schedule } from '~/store/schedules/state/schedule';
+import { State } from '~/store_modules/schedules/state';
+import { Schedule } from '~/store_modules/schedules/state/schedule';
 import ScheduleComponent from '~/components/schedules/lists/schedule.vue';
 
 @Component({

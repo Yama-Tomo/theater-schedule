@@ -7,7 +7,7 @@ section
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 import { Actions as ActionsMapper } from '~/mixins/store_helper';
-import { Actions } from '~/store/schedules/actions';
+import { Actions } from '~/store_modules/schedules/actions';
 import { HTMLElementEvent } from '~/dom.d';
 
 @Component

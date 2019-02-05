@@ -1,5 +1,5 @@
-import { State as ScedulesState } from './store/schedules/state';
-import { Actions as ScedulesActions } from './store/schedules/actions';
+import { State as ScedulesState } from './store_modules/schedules/state';
+import { Actions as ScedulesActions } from './store_modules/schedules/actions';
 
 export const schedules = 'schedules';
 
@@ -8,5 +8,5 @@ export interface StateMaps {
 }
 
 export interface ActionMaps {
- [schedules]: ScedulesActions;
+  [schedules]: ScedulesActions;
 }

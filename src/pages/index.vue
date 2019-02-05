@@ -14,7 +14,7 @@ import { Mixins } from 'vue-mixin-decorator';
 import { StoreHelper, StoreHelperMixin, Actions as ActionsMapper } from '~/mixins/store_helper';
 import { schedules } from '~/module_mapper';
 import { NuxtContext } from '~/index.d';
-import { Actions } from '~/store/schedules/actions';
+import { Actions } from '~/store_modules/schedules/actions';
 import Overview from '~/components/schedules/overview.vue';
 import Search from '~/components/schedules/search.vue';
 import Lists from '~/components/schedules/lists.vue';

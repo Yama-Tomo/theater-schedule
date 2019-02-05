@@ -5,14 +5,15 @@ export interface State {
   searchWord: string;
 }
 
-export const state: State = {
+export const state = (): State => ({
   schedules: [],
   searchWord: '',
-};
+});
 
 export default state;
 
 export const initialStateResolver = (data: any): State => {
+  const defaultState = state();
   const schedules: Schedule[] = data.map((schedule: any) => {
    return {
      startDate: schedule.start_date ? new Date(schedule.start_date) : undefined,
@@ -35,6 +36,6 @@ export const initialStateResolver = (data: any): State => {
 
   return {
     schedules,
-    searchWord: state.searchWord,
+    searchWord: defaultState.searchWord,
   };
 };
