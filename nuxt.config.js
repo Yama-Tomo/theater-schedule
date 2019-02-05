@@ -30,25 +30,14 @@ module.exports = {
   loading: { color: '#3B8070' },
   css: ['~/assets/scss/index.scss'],
   build: {
+    useForkTsChecker: true,
     extractCSS: true,
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.(css|vue)$/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
-    },
+    extend: require('./extend.webpack.config'),
     stats: {
       warningsFilter: /export .* was not found in/,
     }
   },
   modules: [
-    '~/modules/typescript.js',
     ...(process.env.GOOGLE_ANALYTICS_ID ? [[
          '@nuxtjs/google-analytics', {
             id: process.env.GOOGLE_ANALYTICS_ID
