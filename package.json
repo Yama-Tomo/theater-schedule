@@ -23,7 +23,7 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "2.0.3",
     "@nuxtjs/sitemap": "0.2.0",
-    "@types/node": "10.12.23",
+    "@types/node": "10.12.24",
     "bulma": "0.7.4",
     "nuxt": "2.4.3",
     "nuxt-class-component": "1.2.1",
