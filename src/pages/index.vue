@@ -9,8 +9,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'nuxt-property-decorator';
-import { Mixins } from 'vue-mixin-decorator';
+import { Component, mixins } from 'nuxt-property-decorator';
 import { StoreHelper, StoreHelperMixin, Actions as ActionsMapper } from '~/mixins/store_helper';
 import { schedules } from '~/module_mapper';
 import { NuxtContext } from '~/index.d';
@@ -28,7 +27,7 @@ import Twitter from '~/components/schedules/twitter.vue';
     Twitter,
   },
 })
-export default class extends Mixins<StoreHelperMixin>(StoreHelperMixin) {
+export default class extends mixins(StoreHelperMixin) {
   public async fetch(ctx: NuxtContext) {
     const actions: ActionsMapper<Actions> = StoreHelper.getActions(ctx.store, schedules);
     actions.fetchInitialState(undefined);

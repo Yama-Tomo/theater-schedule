@@ -1,6 +1,5 @@
-import { Vue } from 'nuxt-property-decorator';
+import { Vue, Component } from 'nuxt-property-decorator';
 import { Store } from 'vuex';
-import { Mixin } from 'vue-mixin-decorator';
 import { StateMaps, ActionMaps } from '../module_mapper';
 
 export type Actions<A> = {
@@ -36,7 +35,7 @@ export class StoreHelper {
  * container componentでの使用にとどめ，propsでstate, actionを渡す実装がよいでしょう
  */
 // TODO: https://github.com/vuejs/vue-class-component/issues/294 が解決するまで tsconfigに "strictFunctionTypes": false を設定しておく
-@Mixin
+@Component
 export class StoreHelperMixin extends Vue {
   public getState<K extends keyof StateMaps>(module: K): StateMaps[K] {
     return StoreHelper.getState(this.$store, module);
