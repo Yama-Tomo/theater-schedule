@@ -1,7 +1,7 @@
 <template lang="pug">
 .content
   Overview
-  .time
+  .time updated:
     time {{ today }}
   Search(:actions="actions")
   Lists(:state="state")
@@ -54,9 +54,9 @@ export default class extends mixins(StoreHelperMixin) {
 
   get today(): string {
     const zeroPadding = (num: number) => `0${num.toString()}`.slice(-2);
-    const today = new Date();
+    const date = process.env.currentTime ? new Date(process.env.currentTime) : new Date();
 
-    return [today.getFullYear(), zeroPadding(today.getMonth() + 1), zeroPadding(today.getDate())].join('.');
+    return [ date.getFullYear(), zeroPadding( date.getMonth() + 1), zeroPadding( date.getDate())].join('.');
   }
 
   get state() {
@@ -87,6 +87,9 @@ export default class extends mixins(StoreHelperMixin) {
   .time {
     color: $main-font-color;
     text-align: right;
+    time {
+      padding-left: 5px;
+    }
   }
 }
 
