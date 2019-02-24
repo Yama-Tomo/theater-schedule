@@ -9,7 +9,7 @@
     "gen": "nuxt generate",
     "build": "nuxt build",
     "start": "nuxt start",
-    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && npm run gen"
+    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && NODE_ENV=production npm run gen"
   },
   "pre-commit": [
     "lint:commit"
