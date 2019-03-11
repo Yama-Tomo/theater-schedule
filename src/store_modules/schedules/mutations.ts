@@ -10,6 +10,7 @@ const mutations: DefineMutations<Mutations, State> = {
   setInitialState: (state, value) => {
     state.schedules = value.schedules;
     state.lastUpdated = value.lastUpdated;
+    state.meta = value.meta;
   },
   updateSearchWord: (state, value) => state.searchWord = value,
 };

@@ -3,12 +3,14 @@ import { Schedule } from './state/schedule';
 export interface State {
   lastUpdated: Date;
   schedules: Schedule[];
+  meta: { description: string, keyword: string };
   searchWord: string;
 }
 
 export const state = (): State => ({
   lastUpdated: new Date(),
   schedules: [],
+  meta: { description: '', keyword: '' },
   searchWord: '',
 });
 
@@ -36,9 +38,15 @@ export const initialStateResolver = (data: any): State => {
     };
   });
 
+  const meta = {
+    description: data.meta.description,
+    keyword: data.meta.keyword,
+  };
+
   return {
     lastUpdated: new Date(data.last_updated),
     schedules,
+    meta,
     searchWord: defaultState.searchWord,
   };
 };

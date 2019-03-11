@@ -1,5 +1,8 @@
 ---
 last_updated: '2019-03-09T15:58:35.815Z'
+meta:
+  description: description contnet
+  keyword: keyword content
 schedules:
   - start_date: 2018-01-01
     end_date: 2018-02-01

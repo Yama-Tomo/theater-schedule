@@ -34,7 +34,7 @@ export default class extends mixins(StoreHelperMixin) {
   }
 
   public head() {
-    const description = '現在公演中の東京の主要な舞台／演劇／ミュージカル／歌舞伎／Endless SHOCKの上演時間をわかる範囲でまとめています。';
+    const description = this.state.meta.description;
 
     return {
       link: [
@@ -42,7 +42,7 @@ export default class extends mixins(StoreHelperMixin) {
       ],
       meta: [
         { hid: 'description', name: 'description', content: description },
-        { hid: 'keyword', name: 'keyword', content: '上演時間 舞台 演劇 ミュージカル 歌舞伎 まとめ' },
+        { hid: 'keyword', name: 'keyword', content: this.state.meta.keyword },
         { hid: 'og:keyword', name: 'og:keyword', content: description },
       ],
     };
