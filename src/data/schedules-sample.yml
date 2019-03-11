@@ -1,17 +1,19 @@
--
-  start_date: 2018-01-01
-  end_date: 2018-02-01
-  name: 公演名
-  theater: 劇場名
-  station: 最寄駅名
-  theater_site_url: https://劇場のURL
-  running_time: 約2時間20分
-  recess: （休憩なし）
-  tickets_on_the_day: 公演日前日の14:00～16:00に電話受付（先着順）
-  tickets_on_the_day_information_url: https://当日券の詳細URL
-  official_site_url: http://公演のURL
-  actors:
-    -
-      name: A
-    -
-      name: B
+---
+last_updated: '2019-03-09T15:58:35.815Z'
+schedules:
+  - start_date: 2018-01-01
+    end_date: 2018-02-01
+    name: 公演名
+    theater: 劇場名
+    station: 最寄駅名
+    theater_site_url: https://劇場のURL
+    running_time: 約2時間20分
+    recess: （休憩なし）
+    tickets_on_the_day: 公演日前日の14:00～16:00に電話受付（先着順）
+    tickets_on_the_day_information_url: https://当日券の詳細URL
+    official_site_url: http://公演のURL
+    actors:
+      -
+        name: A
+      -
+        name: B
