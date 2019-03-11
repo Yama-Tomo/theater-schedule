@@ -8,7 +8,7 @@ section
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
 import { Actions as ActionsMapper } from '~/mixins/store_helper';
 import { Actions } from '~/store_modules/schedules/actions';
-import { HTMLElementEvent } from '~/dom.d';
+import { HTMLElementEvent } from '~/types/dom';
 
 @Component
 export default class extends Vue {
