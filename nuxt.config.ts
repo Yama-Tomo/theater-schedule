@@ -1,12 +1,14 @@
-const port = process.env.PORT || process.env.npm_package_config_nuxt_port
-const host = process.env.HOST || process.env.npm_package_config_nuxt_host
-const isDev = process.env.NODE_ENV == 'development'
+import extendWebpackConfig from './extend.webpack.config';
 
-module.exports = {
+const port = process.env.NUXT_PORT || 3200;
+const host = process.env.NUXT_HOST || '0.0.0.0';
+const isDev = process.env.NODE_ENV === 'development';
+
+export default {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`,
     isDev,
-    twitterEmbeddedUrl: process.env.TWITTER_EMBEDDED_URL ? process.env.TWITTER_EMBEDDED_URL : ''
+    twitterEmbeddedUrl: process.env.TWITTER_EMBEDDED_URL ? process.env.TWITTER_EMBEDDED_URL : '',
   },
   server: {
     port,
@@ -23,25 +25,25 @@ module.exports = {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+        href: '/favicon.ico',
+      },
+    ],
   },
   loading: { color: '#3B8070' },
   css: ['~/assets/scss/index.scss'],
   build: {
     useForkTsChecker: true,
     extractCSS: true,
-    extend: require('./extend.webpack.config'),
+    extend: extendWebpackConfig,
     stats: {
       warningsFilter: /export .* was not found in/,
-    }
+    },
   },
   modules: [
     ...(process.env.GOOGLE_ANALYTICS_ID ? [[
          '@nuxtjs/google-analytics', {
-            id: process.env.GOOGLE_ANALYTICS_ID
-          }
+            id: process.env.GOOGLE_ANALYTICS_ID,
+          },
         ]] : []),
     ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
   ],
@@ -50,4 +52,4 @@ module.exports = {
     hostname: process.env.HOSTNAME,
     generate: true,
   },
-}
+};

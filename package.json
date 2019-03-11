@@ -5,8 +5,8 @@
   "scripts": {
     "lint": "vue-cli-service lint --no-fix || true",
     "lint:commit": ".scripts/lint_when_precommit",
-    "dev": "nuxt",
-    "gen": "nuxt generate",
+    "dev": "nuxt-ts",
+    "gen": "nuxt-ts generate",
     "build": "nuxt build",
     "start": "nuxt start",
     "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && NODE_ENV=production npm run gen"
@@ -14,12 +14,6 @@
   "pre-commit": [
     "lint:commit"
   ],
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "3200"
-    }
-  },
   "dependencies": {
     "@nuxtjs/google-analytics": "2.2.0",
     "@nuxtjs/sitemap": "0.2.0",
