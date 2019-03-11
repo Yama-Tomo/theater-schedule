@@ -14,7 +14,7 @@
     p.bold {{ runningTime }}
     p.bold.font-size-small {{ recess }}
   .column.is-4-desktop.is-12-mobile.is-4-tablet.font-size-small
-    p {{ ticketOnTheDay }}
+    p(v-if="ticketOnTheDay") {{ ticketOnTheDay }}
       a(:href="ticketsOnTheDayInformationUrl" class="more" v-if="ticketsOnTheDayInformationUrl" target="_blank") 詳しくはこちら
     p(v-if="officialSiteUrl")
       a(:href="officialSiteUrl" target="_blank") 公演公式サイト
