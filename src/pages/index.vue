@@ -54,7 +54,7 @@ export default class extends mixins(StoreHelperMixin) {
 
   get today(): string {
     const zeroPadding = (num: number) => `0${num.toString()}`.slice(-2);
-    const date = process.env.currentTime ? new Date(process.env.currentTime) : new Date();
+    const date = this.state.lastUpdated;
 
     return [ date.getFullYear(), zeroPadding( date.getMonth() + 1), zeroPadding( date.getDate())].join('.');
   }

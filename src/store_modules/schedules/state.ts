@@ -1,11 +1,13 @@
 import { Schedule } from './state/schedule';
 
 export interface State {
+  lastUpdated: Date;
   schedules: Schedule[];
   searchWord: string;
 }
 
 export const state = (): State => ({
+  lastUpdated: new Date(),
   schedules: [],
   searchWord: '',
 });
@@ -14,7 +16,7 @@ export default state;
 
 export const initialStateResolver = (data: any): State => {
   const defaultState = state();
-  const schedules: Schedule[] = data.map((schedule: any) => {
+  const schedules: Schedule[] = data.schedules.map((schedule: any) => {
    return {
      startDate: schedule.start_date ? new Date(schedule.start_date) : undefined,
      endDate: schedule.end_date ? new Date(schedule.end_date) : undefined,
@@ -35,6 +37,7 @@ export const initialStateResolver = (data: any): State => {
   });
 
   return {
+    lastUpdated: new Date(data.last_updated),
     schedules,
     searchWord: defaultState.searchWord,
   };
