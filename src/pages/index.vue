@@ -12,7 +12,7 @@
 import { Component, mixins } from 'nuxt-property-decorator';
 import { StoreHelper, StoreHelperMixin, Actions as ActionsMapper } from '~/mixins/store_helper';
 import { schedules } from '~/store_modules/module_mapper';
-import { NuxtContext } from '~/index.d';
+import { Nuxt } from '~/types/nuxt';
 import { Actions } from '~/store_modules/schedules/actions';
 import Overview from '~/components/schedules/overview.vue';
 import Search from '~/components/schedules/search.vue';
@@ -28,7 +28,7 @@ import Twitter from '~/components/schedules/twitter.vue';
   },
 })
 export default class extends mixins(StoreHelperMixin) {
-  public async fetch(ctx: NuxtContext) {
+  public async fetch(ctx: Nuxt.Context) {
     const actions: ActionsMapper<Actions> = StoreHelper.getActions(ctx.store, schedules);
     actions.fetchInitialState(undefined);
   }
