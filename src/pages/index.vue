@@ -11,7 +11,7 @@
 <script lang="ts">
 import { Component, mixins } from 'nuxt-property-decorator';
 import { StoreHelper, StoreHelperMixin, Actions as ActionsMapper } from '~/mixins/store_helper';
-import { schedules } from '~/module_mapper';
+import { schedules } from '~/store_modules/module_mapper';
 import { NuxtContext } from '~/index.d';
 import { Actions } from '~/store_modules/schedules/actions';
 import Overview from '~/components/schedules/overview.vue';
