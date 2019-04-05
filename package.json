@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@types/hard-source-webpack-plugin": "1.0.0",
-    "@types/webpack": "4.4.26",
-    "@vue/cli-plugin-babel": "3.5.3",
+    "@types/webpack": "4.4.27",
+    "@vue/cli-plugin-babel": "3.5.5",
     "@vue/cli-plugin-typescript": "3.5.3",
     "@vue/cli-service": "3.5.3",
     "hard-source-webpack-plugin": "0.13.1",
