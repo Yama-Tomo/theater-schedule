@@ -5,9 +5,9 @@
   "scripts": {
     "lint": "vue-cli-service lint --no-fix || true",
     "lint:commit": ".scripts/lint_when_precommit",
-    "dev": "nuxt-ts",
-    "gen": "nuxt-ts generate",
-    "build": "nuxt-ts build && tsc -p tsconfig.nuxt-config.json",
+    "dev": "nuxt",
+    "gen": "nuxt generate",
+    "build": "nuxt build && tsc -p tsconfig.nuxt-config.json",
     "start": "nuxt start -c .nuxt/ts-compiled/nuxt.config.js",
     "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && NODE_ENV=production npm run gen"
   },
@@ -24,6 +24,7 @@
     "vuex-type-helper": "1.2.1"
   },
   "devDependencies": {
+    "@nuxt/typescript": "2.6.1",
     "@types/hard-source-webpack-plugin": "1.0.0",
     "@types/webpack": "4.4.27",
     "@vue/cli-plugin-babel": "3.5.5",
@@ -32,11 +33,11 @@
     "hard-source-webpack-plugin": "0.13.1",
     "json-loader": "0.5.7",
     "node-sass": "4.11.0",
-    "nuxt-ts": "2.6.1",
     "pre-commit": "1.2.2",
     "pug": "2.0.3",
     "pug-plain-loader": "1.0.0",
     "sass-loader": "7.1.0",
+    "ts-node": "8.0.3",
     "typescript": "3.4.2",
     "yaml-loader": "0.5.0"
   }
