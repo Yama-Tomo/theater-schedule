@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "gen": "nuxt generate",
     "build": "nuxt build && tsc -p tsconfig.nuxt-config.json",
-    "start": "nuxt start -c .nuxt/ts-compiled/nuxt.config.js",
+    "start": "./server.js start -c .nuxt/ts-compiled/nuxt.config.js",
     "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && NODE_ENV=production npm run gen"
   },
   "pre-commit": [
