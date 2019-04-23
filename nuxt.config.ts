@@ -48,8 +48,6 @@ export default {
     ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
   ],
   sitemap: {
-    path: '/sitemap.xml',
     hostname: process.env.HOSTNAME,
-    generate: true,
   },
 };
