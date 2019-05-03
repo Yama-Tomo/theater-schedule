@@ -16,8 +16,8 @@
   ],
   "dependencies": {
     "@nuxtjs/google-analytics": "2.2.0",
-    "@nuxtjs/sitemap": "1.0.0",
-    "@types/node": "10.14.6",
+    "@nuxtjs/sitemap": "1.1.0",
+    "@types/node": "11.13.9",
     "bulma": "0.7.4",
     "nuxt": "2.6.3",
     "nuxt-property-decorator": "2.1.3",
