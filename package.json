@@ -26,7 +26,7 @@
   "devDependencies": {
     "@nuxt/typescript": "2.6.3",
     "@types/hard-source-webpack-plugin": "1.0.1",
-    "@types/webpack": "4.4.31",
+    "@types/webpack": "4.4.32",
     "@vue/cli-plugin-babel": "3.7.0",
     "@vue/cli-plugin-typescript": "3.7.0",
     "@vue/cli-service": "3.7.0",
