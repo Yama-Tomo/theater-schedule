@@ -1,8 +1,0 @@
-#!/bin/bash
-
-list=$(git diff --cached --name-only | grep -E '\.vue|\.ts')
-
-if [ -n "$list" ]; then
-  echo -e '\033[0;33mTSLint checks......\n \033[0;39m'
-  vue-cli-service lint --no-fix $list
-fi
