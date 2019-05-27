@@ -35,8 +35,8 @@ export default {
     useForkTsChecker: true,
     extractCSS: true,
     extend: extendWebpackConfig,
-    stats: {
-      warningsFilter: /export .* was not found in/,
+    typescript: {
+      ignoreNotFoundWarnings: true,
     },
   },
   modules: [
