@@ -37,7 +37,7 @@
     "@types/webpack": "4.4.32",
     "@vue/cli-plugin-babel": "3.8.0",
     "@vue/cli-plugin-typescript": "3.8.1",
-    "@vue/cli-service": "3.8.3",
+    "@vue/cli-service": "3.8.4",
     "hard-source-webpack-plugin": "0.13.1",
     "husky": "2.3.0",
     "json-loader": "0.5.7",
