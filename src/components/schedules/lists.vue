@@ -17,9 +17,9 @@ section
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { State } from '~/store_modules/schedules/state';
-import { Schedule } from '~/store_modules/schedules/state/schedule';
-import ScheduleComponent from '~/components/schedules/lists/schedule.vue';
+import { StateTree} from '@/store/module_mapper';
+import { Schedule } from '@/store/schedules';
+import ScheduleComponent from '@/components/schedules/lists/schedule.vue';
 
 @Component({
   components: {
@@ -27,7 +27,7 @@ import ScheduleComponent from '~/components/schedules/lists/schedule.vue';
   },
 })
 export default class extends Vue {
-  @Prop(Object) public state!: State;
+  @Prop(Object) public state!: StateTree['schedules'];
 
   get schedules(): Schedule[] {
     if (!this.state.searchWord) {

@@ -9,15 +9,13 @@
 </template>
 
 <script lang="ts">
-import { Component, mixins } from 'nuxt-property-decorator';
-import { StoreHelper, StoreHelperMixin, Actions as ActionsMapper } from '~/mixins/store_helper';
-import { schedules } from '~/store_modules/module_mapper';
-import { Nuxt } from '~/types/nuxt';
-import { Actions } from '~/store_modules/schedules/actions';
-import Overview from '~/components/schedules/overview.vue';
-import Search from '~/components/schedules/search.vue';
-import Lists from '~/components/schedules/lists.vue';
-import Twitter from '~/components/schedules/twitter.vue';
+import { Component, Vue } from 'nuxt-property-decorator';
+import * as StoreHelper from '@/store/helper';
+import { Nuxt } from '@/types/nuxt';
+import Overview from '@/components/schedules/overview.vue';
+import Search from '@/components/schedules/search.vue';
+import Lists from '@/components/schedules/lists.vue';
+import Twitter from '@/components/schedules/twitter.vue';
 
 @Component({
   components: {
@@ -27,10 +25,10 @@ import Twitter from '~/components/schedules/twitter.vue';
     Twitter,
   },
 })
-export default class extends mixins(StoreHelperMixin) {
+export default class extends Vue {
   public async fetch(ctx: Nuxt.Context) {
-    const actions: ActionsMapper<Actions> = StoreHelper.getActions(ctx.store, schedules);
-    actions.fetchInitialState(undefined);
+    const actions = StoreHelper.getActions('schedules', ctx.store);
+    actions.fetchInitialState();
   }
 
   public head() {
@@ -60,11 +58,11 @@ export default class extends mixins(StoreHelperMixin) {
   }
 
   get state() {
-    return this.getState(schedules);
+    return StoreHelper.getState('schedules', this.$store);
   }
 
   get actions() {
-    return this.getActions(schedules);
+    return StoreHelper.getActions('schedules', this.$store);
   }
 }
 </script>

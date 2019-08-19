@@ -6,13 +6,12 @@ section
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { Actions as ActionsMapper } from '~/mixins/store_helper';
-import { Actions } from '~/store_modules/schedules/actions';
-import { HTMLElementEvent } from '~/types/dom';
+import { ActionTree } from '@/store/module_mapper';
+import { HTMLElementEvent } from '@/types/dom';
 
 @Component
 export default class extends Vue {
-  @Prop(Object) public actions!: ActionsMapper<Actions>;
+  @Prop(Object) public actions!: ActionTree['schedules'];
 
   public setTimeoutId: null|NodeJS.Timeout = null;
 

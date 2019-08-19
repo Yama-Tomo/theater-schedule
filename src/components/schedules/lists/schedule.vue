@@ -22,11 +22,11 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { Schedule } from '../../../store_modules/schedules/state/schedule';
+import { Schedule } from '@/store/schedules';
 
 @Component
 export default class extends Vue {
-@Prop(Object) public schedule!: Schedule;
+  @Prop(Object) public schedule!: Schedule;
 
   get date(): string {
     const zeroPadding = (num: string) => `0${num}`.slice(-2);
