@@ -46,6 +46,7 @@ export default {
           },
         ]] : []),
     ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
+    ['@nuxt/typescript-build', { typeCheck: false, ignoreNotFoundWarnings: true }],
   ],
   sitemap: {
     hostname: process.env.HOSTNAME,
