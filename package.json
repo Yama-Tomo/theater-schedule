@@ -5,11 +5,11 @@
   "scripts": {
     "lint": "vue-cli-service lint --no-fix || true",
     "lint-fix": "vue-cli-service lint --fix",
-    "dev": "nuxt",
-    "gen": "nuxt generate",
-    "build": "nuxt build && tsc -p tsconfig.nuxt-config.json",
-    "start": "./server.js start -c .nuxt/ts-compiled/nuxt.config.js",
-    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && NODE_ENV=production npm run gen"
+    "dev": "nuxt-ts",
+    "gen": "nuxt-ts generate",
+    "build": "nuxt-ts build && tsc -p tsconfig.nuxt-config.json",
+    "start": "nuxt start -c .nuxt/ts-compiled/nuxt.config.js",
+    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && yarn gen"
   },
   "husky": {
     "hooks": {
