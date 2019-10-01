@@ -36,7 +36,7 @@
     "@nuxt/typescript-runtime": "0.1.7",
     "@types/hard-source-webpack-plugin": "1.0.1",
     "@types/lodash": "4.14.141",
-    "@types/webpack": "4.39.1",
+    "@types/webpack": "4.39.2",
     "@vue/cli-plugin-babel": "3.11.0",
     "@vue/cli-plugin-typescript": "3.11.0",
     "@vue/cli-service": "3.11.0",
