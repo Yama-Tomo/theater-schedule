@@ -31,8 +31,8 @@
     "vuex-type-helper": "1.2.2"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "0.6.3",
-    "@nuxt/typescript-runtime": "0.4.3",
+    "@nuxt/typescript-build": "0.6.4",
+    "@nuxt/typescript-runtime": "0.4.4",
     "@types/hard-source-webpack-plugin": "1.0.1",
     "@types/lodash": "4.14.149",
     "@types/webpack": "4.41.10",
@@ -40,7 +40,7 @@
     "@vue/cli-plugin-typescript": "4.2.3",
     "@vue/cli-service": "4.2.3",
     "hard-source-webpack-plugin": "0.13.1",
-    "husky": "4.2.3",
+    "husky": "4.2.5",
     "json-loader": "0.5.7",
     "lint-staged": "10.0.10",
     "node-sass": "4.13.1",
