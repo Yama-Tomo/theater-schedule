@@ -25,14 +25,14 @@
     "@nuxtjs/google-analytics": "2.2.3",
     "@nuxtjs/sitemap": "2.1.0",
     "@types/node": "13.9.8",
-    "bulma": "0.8.1",
+    "bulma": "0.8.2",
     "nuxt": "2.12.2",
     "nuxt-property-decorator": "2.5.1",
     "vuex-type-helper": "1.2.2"
   },
   "devDependencies": {
-    "@nuxt/typescript-build": "0.6.4",
-    "@nuxt/typescript-runtime": "0.4.4",
+    "@nuxt/typescript-build": "0.6.5",
+    "@nuxt/typescript-runtime": "0.4.5",
     "@types/hard-source-webpack-plugin": "1.0.1",
     "@types/lodash": "4.14.149",
     "@types/webpack": "4.41.10",
