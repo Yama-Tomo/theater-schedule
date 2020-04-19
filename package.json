@@ -42,7 +42,7 @@
     "hard-source-webpack-plugin": "0.13.1",
     "husky": "4.2.5",
     "json-loader": "0.5.7",
-    "lint-staged": "10.1.5",
+    "lint-staged": "10.1.6",
     "node-sass": "4.13.1",
     "pug": "2.0.4",
     "pug-plain-loader": "1.0.0",
