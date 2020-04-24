@@ -1152,10 +1152,10 @@
   dependencies:
     vue-analytics "^5.22.1"
 
-"@nuxtjs/sitemap@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-2.2.0.tgz#e86fbd8d7568252440a052b416fab7e46e25d862"
-  integrity sha512-SiRAWTtZ/iQlctr2B7mByfg0DUlpsL3Zx7KNiAz30mlgltIvRZFv5x43kG7wqztyZ+CY103hW6pvxVn3j9QEVQ==
+"@nuxtjs/sitemap@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/sitemap/-/sitemap-2.2.1.tgz#a00b528e361673b3f2651a0f1ee4081e89f9c6fd"
+  integrity sha512-GrXTueBaSQgAuBbUrGcKu37VbZBOZ4omHqk8FfthK71R26vp9LWUcqlRbuQaIrAYynjSfSPxaLpX8opUwO1nKw==
   dependencies:
     async-cache "^1.1.0"
     consola "^2.11.3"
@@ -1394,10 +1394,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.2.tgz#ace1880c03594cc3e80206d96847157d8e7fa349"
   integrity sha512-bnoqK579sAYrQbp73wwglccjJ4sfRdKU7WNEZ5FW4K2U6Kc0/eZ5kvXG0JKsEKFB50zrFmfFt52/cvBbZa7eXg==
 
-"@types/node@13.13.0":
-  version "13.13.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.0.tgz#30d2d09f623fe32cde9cb582c7a6eda2788ce4a8"
-  integrity sha512-WE4IOAC6r/yBZss1oQGM5zs2D7RuKR6Q+w+X2SouPofnWn+LbCqClRyhO3ZE7Ix8nmFgo/oVuuE01cJT2XB13A==
+"@types/node@13.13.2":
+  version "13.13.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
+  integrity sha512-LB2R1Oyhpg8gu4SON/mfforE525+Hi/M1ineICEDftqNVTyFg1aRIeGuTvXAoWHc4nbrFncWtJgMmoyRvuGh7A==
 
 "@types/node@^12.0.2":
   version "12.12.30"
@@ -6183,10 +6183,10 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@10.1.6:
-  version "10.1.6"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.1.6.tgz#086db5e4f5906642ccf648e9b54375d794a9be81"
-  integrity sha512-45zaGxf4XZuwdUk87yRFE/1b4vTZmH2UnYmUPmindsgdAljOFpWWb0yEjxngmqERUS/MGauJexFF6BjLVg9VMA==
+lint-staged@10.1.7:
+  version "10.1.7"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-10.1.7.tgz#b628f8b010083fe4e116d0af7949a32f1ea6b3a7"
+  integrity sha512-ZkK8t9Ep/AHuJQKV95izSa+DqotftGnSsNeEmCSqbQ6j4C4H0jDYhEZqVOGD1Q2Oe227igbqjMWycWyYbQtpoA==
   dependencies:
     chalk "^4.0.0"
     commander "^5.0.0"
