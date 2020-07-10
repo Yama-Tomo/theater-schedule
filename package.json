@@ -24,7 +24,7 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "2.3.0",
     "@nuxtjs/sitemap": "2.3.2",
-    "@types/node": "13.13.12",
+    "@types/node": "13.13.14",
     "bulma": "0.8.2",
     "nuxt": "2.12.2",
     "nuxt-property-decorator": "2.7.2",
@@ -35,7 +35,7 @@
     "@nuxt/typescript-runtime": "0.4.10",
     "@types/hard-source-webpack-plugin": "1.0.1",
     "@types/lodash": "4.14.157",
-    "@types/webpack": "4.41.18",
+    "@types/webpack": "4.41.21",
     "@vue/cli-plugin-babel": "4.4.6",
     "@vue/cli-plugin-typescript": "4.4.6",
     "@vue/cli-service": "4.4.6",
