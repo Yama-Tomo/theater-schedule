@@ -42,7 +42,7 @@ export default (config: Configuration) => {
 
     config.plugins.push(
       new HardSourceWebpackPlugin.ExcludeModulePlugin([
-        { test: /extract-css-chunks-webpack-plugin[\\/]dist[\\/]hotLoader/ },
+        { test: /extract-css-chunks-webpack-plugin[\\/]dist[\\/]loader/ },
       ])
     );
   }
