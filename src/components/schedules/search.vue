@@ -13,7 +13,7 @@ import { HTMLElementEvent } from '@/types/dom';
 export default class extends Vue {
   @Prop(Object) public actions!: ActionTree['schedules'];
 
-  public setTimeoutId: null|NodeJS.Timeout = null;
+  public setTimeoutId: null | NodeJS.Timeout = null;
 
   public onSearchWordChanged(event: HTMLElementEvent<HTMLInputElement>) {
     if (this.setTimeoutId !== null) {
@@ -29,8 +29,8 @@ export default class extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "~assets/scss/_variables";
-@import "~assets/scss/schedules/_variables";
+@import '~assets/scss/_variables';
+@import '~assets/scss/schedules/_variables';
 
 section {
   margin-left: -$padding;
@@ -38,7 +38,7 @@ section {
   padding-left: $padding;
   padding-right: $padding;
 
-  background-color: #DED9D3;
+  background-color: #ded9d3;
   text-align: center;
   color: $main-font-color;
 
@@ -51,7 +51,7 @@ section {
   }
 }
 
-@media(min-width: $desktop) {
+@media (min-width: $desktop) {
   section {
     margin-left: 0px;
     margin-right: 0px;
