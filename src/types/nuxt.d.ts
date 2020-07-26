@@ -8,10 +8,4 @@ export namespace Nuxt {
       getRouteBaseName(route: Route): string;
     };
   }
-
-  export interface Error {
-    statusCode: number;
-    path: string;
-    message: string;
-  }
 }
