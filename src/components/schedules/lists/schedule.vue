@@ -34,8 +34,9 @@ export default class extends Vue {
     const stack = [];
     if (this.schedule.startDate) {
       stack.push(
-        zeroPadding((this.schedule.startDate.getMonth() + 1).toString()) + '/' +
-        zeroPadding((this.schedule.startDate.getDate()).toString()),
+        zeroPadding((this.schedule.startDate.getMonth() + 1).toString()) +
+          '/' +
+          zeroPadding(this.schedule.startDate.getDate().toString())
       );
     }
 
@@ -43,19 +44,26 @@ export default class extends Vue {
 
     if (this.schedule.endDate) {
       stack.push(
-        zeroPadding((this.schedule.endDate.getMonth() + 1).toString()) + '/' +
-        zeroPadding((this.schedule.endDate.getDate()).toString()),
+        zeroPadding((this.schedule.endDate.getMonth() + 1).toString()) +
+          '/' +
+          zeroPadding(this.schedule.endDate.getDate().toString())
       );
     }
 
     return stack.join('');
   }
 
-  get name(): string { return this.schedule.name; }
+  get name(): string {
+    return this.schedule.name;
+  }
 
-  get theater(): string { return this.schedule.theater; }
+  get theater(): string {
+    return this.schedule.theater;
+  }
 
-  get station(): string { return this.schedule.station; }
+  get station(): string {
+    return this.schedule.station;
+  }
 
   get runningTime(): string {
     return this.schedule.runningTime ? this.schedule.runningTime : '';
@@ -78,18 +86,21 @@ export default class extends Vue {
   }
 
   get ticketsOnTheDayInformationUrl(): string {
-    return this.schedule.ticketsOnTheDayInformationUrl ? this.schedule.ticketsOnTheDayInformationUrl : '';
+    return this.schedule.ticketsOnTheDayInformationUrl
+      ? this.schedule.ticketsOnTheDayInformationUrl
+      : '';
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "~assets/scss/_variables";
+@import '~assets/scss/_variables';
 
 .columns {
   margin-bottom: 0px;
 
-  h2, h3 {
+  h2,
+  h3 {
     color: $main-font-color;
     font-size: inherit;
     margin-top: 0px;
@@ -119,16 +130,17 @@ export default class extends Vue {
   }
 }
 
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
   .column {
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
   }
 }
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   .column {
-    &.second, &.third {
+    &.second,
+    &.third {
       width: 100%;
     }
   }

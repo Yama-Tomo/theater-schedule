@@ -8,7 +8,9 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`,
     isDev,
-    twitterEmbeddedUrl: process.env.TWITTER_EMBEDDED_URL ? process.env.TWITTER_EMBEDDED_URL : '',
+    twitterEmbeddedUrl: process.env.TWITTER_EMBEDDED_URL
+      ? process.env.TWITTER_EMBEDDED_URL
+      : '',
   },
   server: {
     port,
@@ -19,7 +21,10 @@ export default {
     title: '上演時間情報まとめ｜corolife',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' },
+      {
+        name: 'viewport',
+        content: 'initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0',
+      },
     ],
     link: [
       {
@@ -40,13 +45,21 @@ export default {
     },
   },
   modules: [
-    ...(process.env.GOOGLE_ANALYTICS_ID ? [[
-         '@nuxtjs/google-analytics', {
-            id: process.env.GOOGLE_ANALYTICS_ID,
-          },
-        ]] : []),
+    ...(process.env.GOOGLE_ANALYTICS_ID
+      ? [
+          [
+            '@nuxtjs/google-analytics',
+            {
+              id: process.env.GOOGLE_ANALYTICS_ID,
+            },
+          ],
+        ]
+      : []),
     ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
-    ['@nuxt/typescript-build', { typeCheck: false, ignoreNotFoundWarnings: true }],
+    [
+      '@nuxt/typescript-build',
+      { typeCheck: false, ignoreNotFoundWarnings: true },
+    ],
   ],
   sitemap: {
     hostname: process.env.HOSTNAME,

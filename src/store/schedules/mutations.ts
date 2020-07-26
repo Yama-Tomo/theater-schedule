@@ -7,7 +7,7 @@ const mutations = {
     state.lastUpdated = value.lastUpdated;
     state.meta = value.meta;
   },
-  updateSearchWord: (state: State, value: string) => state.searchWord = value,
+  updateSearchWord: (state: State, value: string) => (state.searchWord = value),
 };
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars

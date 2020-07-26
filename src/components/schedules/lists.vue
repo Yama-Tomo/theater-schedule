@@ -17,7 +17,7 @@ section
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'nuxt-property-decorator';
-import { StateTree} from '@/store/module_mapper';
+import { StateTree } from '@/store/module_mapper';
 import { Schedule } from '@/store/schedules';
 import ScheduleComponent from '@/components/schedules/lists/schedule.vue';
 
@@ -35,22 +35,26 @@ export default class extends Vue {
     }
 
     const word = this.state.searchWord.toLowerCase();
-    const toFilterWord = (str: string) => str.toLowerCase().replace(/\/| |・|／/g, '');
+    const toFilterWord = (str: string) =>
+      str.toLowerCase().replace(/\/| |・|／/g, '');
 
-    return this.state.schedules.filter((schedule) => {
-      return toFilterWord(schedule.name).indexOf(word) >= 0 ||
-        toFilterWord(schedule.theater).indexOf(word) >= 0 ||
-        toFilterWord(schedule.station).indexOf(word) >= 0 ||
-        (schedule.ticketsOnTheDay && toFilterWord(schedule.ticketsOnTheDay).indexOf(word) >= 0) ||
-        schedule.actors.some((actor) => toFilterWord(actor.name).indexOf(word) >= 0);
+    return this.state.schedules.filter(schedule => {
+      return (
+        toFilterWord(schedule.name).includes(word) ||
+        toFilterWord(schedule.theater).includes(word) ||
+        toFilterWord(schedule.station).includes(word) ||
+        (schedule.ticketsOnTheDay &&
+          toFilterWord(schedule.ticketsOnTheDay).includes(word)) ||
+        schedule.actors.some(actor => toFilterWord(actor.name).includes(word))
+      );
     });
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import "~assets/scss/_variables";
-@import "~assets/scss/schedules/_variables";
+@import '~assets/scss/_variables';
+@import '~assets/scss/schedules/_variables';
 
 section {
   margin-left: -$padding;
@@ -58,10 +62,11 @@ section {
   padding-left: $padding;
   padding-right: $padding;
 
-  background-color: #F2F3F1;
+  background-color: #f2f3f1;
   color: $main-font-color;
 
-  .mobile-title, .tablet-title {
+  .mobile-title,
+  .tablet-title {
     display: none;
   }
 
@@ -81,33 +86,35 @@ section {
   }
 }
 
-@media(max-width: $tablet) {
+@media (max-width: $tablet) {
   section {
-    .tablet-title  {
+    .tablet-title {
       display: block;
       font-weight: 700;
     }
 
-    .desktop-title, .mobile-title {
+    .desktop-title,
+    .mobile-title {
       display: none;
     }
   }
 }
 
-@media(max-width: 650px) {
+@media (max-width: 650px) {
   section {
-    .mobile-title  {
+    .mobile-title {
       display: block;
       font-weight: 700;
     }
 
-    .desktop-title, .tablet-title {
+    .desktop-title,
+    .tablet-title {
       display: none;
     }
   }
 }
 
-@media(min-width: $desktop) {
+@media (min-width: $desktop) {
   section {
     margin-left: 0px;
     margin-right: 0px;

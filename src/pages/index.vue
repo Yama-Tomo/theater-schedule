@@ -26,7 +26,7 @@ import Twitter from '@/components/schedules/twitter.vue';
   },
 })
 export default class extends Vue {
-  public async fetch(ctx: Nuxt.Context) {
+  public fetch(ctx: Nuxt.Context) {
     const actions = StoreHelper.getActions('schedules', ctx.store);
     actions.fetchInitialState();
   }
@@ -36,7 +36,15 @@ export default class extends Vue {
 
     return {
       link: [
-        ... process.env.HOSTNAME ? [{ hid: 'canonical', name: 'canonical', content: process.env.HOSTNAME }] : [],
+        ...(process.env.HOSTNAME
+          ? [
+              {
+                hid: 'canonical',
+                name: 'canonical',
+                content: process.env.HOSTNAME,
+              },
+            ]
+          : []),
       ],
       meta: [
         { hid: 'description', name: 'description', content: description },
@@ -46,7 +54,7 @@ export default class extends Vue {
     };
   }
 
-  get twitterEmbeddedUrl(): string|undefined {
+  get twitterEmbeddedUrl(): string | undefined {
     return process.env.twitterEmbeddedUrl;
   }
 
@@ -54,7 +62,11 @@ export default class extends Vue {
     const zeroPadding = (num: number) => `0${num.toString()}`.slice(-2);
     const date = this.state.lastUpdated;
 
-    return [ date.getFullYear(), zeroPadding( date.getMonth() + 1), zeroPadding( date.getDate())].join('.');
+    return [
+      date.getFullYear(),
+      zeroPadding(date.getMonth() + 1),
+      zeroPadding(date.getDate()),
+    ].join('.');
   }
 
   get state() {
@@ -68,8 +80,8 @@ export default class extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import "~assets/scss/_variables";
-@import "~assets/scss/schedules/_variables";
+@import '~assets/scss/_variables';
+@import '~assets/scss/schedules/_variables';
 
 .content {
   padding-top: 10px;
@@ -91,7 +103,7 @@ export default class extends Vue {
   }
 }
 
-@media(min-width: $desktop) {
+@media (min-width: $desktop) {
   .content {
     padding-left: 0px;
     padding-right: 0px;

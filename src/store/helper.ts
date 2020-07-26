@@ -5,7 +5,7 @@ import { ActionTree, StateTree } from './module_mapper';
 
 export const getActions = <K extends keyof ActionTree>(
   namespace: K,
-  store: Store<any>,
+  store: Store<any>
 ): ActionTree[K] => {
   const nestLevel = namespace.split('/').length;
 
@@ -22,11 +22,11 @@ export const getActions = <K extends keyof ActionTree>(
       const dispatch = (payload: unknown) => store.dispatch(name, payload);
       return set(actions, assignKey, dispatch);
     },
-    {},
+    {}
   );
 };
 
 export const getState = <K extends keyof StateTree>(
   namespace: K,
-  store: Store<any>,
+  store: Store<any>
 ): StateTree[K] => get(store.state, namespace.replace(/\//, '.'));
