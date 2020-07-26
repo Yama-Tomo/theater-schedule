@@ -37,12 +37,8 @@ export default {
   loading: { color: '#3B8070' },
   css: ['~/assets/scss/index.scss'],
   build: {
-    useForkTsChecker: true,
     extractCSS: true,
     extend: extendWebpackConfig,
-    typescript: {
-      ignoreNotFoundWarnings: true,
-    },
   },
   modules: [
     ...(process.env.GOOGLE_ANALYTICS_ID
@@ -58,7 +54,12 @@ export default {
     ...(process.env.HOSTNAME ? ['@nuxtjs/sitemap'] : []),
     [
       '@nuxt/typescript-build',
-      { typeCheck: false, ignoreNotFoundWarnings: true },
+      {
+        typeCheck: {
+          eslint: { files: './**/*.{ts,tsx,js,vue}' },
+        },
+        ignoreNotFoundWarnings: true,
+      },
     ],
   ],
   sitemap: {
