@@ -1073,14 +1073,14 @@
     "@types/webpack-dev-middleware" "^3.7.1"
     "@types/webpack-hot-middleware" "^2.25.3"
 
-"@nuxt/typescript-build@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-2.0.0.tgz#8816a2155246649f604abd45f6ab2c415c46961a"
-  integrity sha512-k3M39SZ99Y8KZXmGCmtc+yHz4NXQdgcSCSzCgoXbu30mX0YdfRIUTiCvJRUPbsfH2vVqwhRCzj33uIDdAYA6cg==
+"@nuxt/typescript-build@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/typescript-build/-/typescript-build-2.0.2.tgz#2d03e19a681eae045bff9de91f97c84eada712b8"
+  integrity sha512-th/jsRrm6r148vRA1FQrWD0BCVrgO8FtAq4Cvm2udilVdrR2Qwo9Z5mD0cqG2S98YykAWoP22FtBPz+Ui46Nww==
   dependencies:
     consola "^2.14.0"
-    fork-ts-checker-webpack-plugin "^5.0.6"
-    ts-loader "^7.0.5"
+    fork-ts-checker-webpack-plugin "^5.0.11"
+    ts-loader "^8.0.1"
     typescript "~3.9"
 
 "@nuxt/typescript-runtime@1.0.0":
@@ -4459,10 +4459,10 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@^5.0.6:
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-5.0.11.tgz#40a49a45403910c118c6ae7f3415dbdb317e4574"
-  integrity sha512-7QFCTfjayFhoX7uxncnHHi3ICWwffUQMoYaHldElA6wYy/9aDTsRIi6QcS8MDAkZa7xdDyv0YKuqcGYjAzboyQ==
+fork-ts-checker-webpack-plugin@^5.0.11:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-5.1.0.tgz#586fbee24aeea950c53bab529e32017f543e71cf"
+  integrity sha512-vuKyEjSLGbhQbEr5bifXXOkr9iV73L6n72mHoHIv7okvrf7O7z6RKeplM6C6ATPsukoQivij+Ba1vcptL60Z2g==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@types/json-schema" "^7.0.5"
@@ -9378,10 +9378,21 @@ tryer@^1.0.1:
   resolved "https://registry.yarnpkg.com/tryer/-/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha512-c3zayb8/kWWpycWYg87P71E1S1ZL6b6IJxfb5fvsUgsf0S2MVGaDhDXXjDMpdCpfWXqptc+4mXwmiy1ypXqRAA==
 
-ts-loader@7.0.5, ts-loader@^7.0.5:
+ts-loader@7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-7.0.5.tgz#789338fb01cb5dc0a33c54e50558b34a73c9c4c5"
   integrity sha512-zXypEIT6k3oTc+OZNx/cqElrsbBtYqDknf48OZos0NQ3RTt045fBIU8RRSu+suObBzYB355aIPGOe/3kj9h7Ig==
+  dependencies:
+    chalk "^2.3.0"
+    enhanced-resolve "^4.0.0"
+    loader-utils "^1.0.2"
+    micromatch "^4.0.0"
+    semver "^6.0.0"
+
+ts-loader@^8.0.1:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-8.0.2.tgz#ee73ca9350f745799396fff8578ba29b1e95616b"
+  integrity sha512-oYT7wOTUawYXQ8XIDsRhziyW0KUEV38jISYlE+9adP6tDtG+O5GkRe4QKQXrHVH4mJJ88DysvEtvGP65wMLlhg==
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^4.0.0"
