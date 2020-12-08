@@ -1,6 +1,9 @@
 module.exports = {
   root: true,
   plugins: ['babel', 'prettier'],
+  globals: {
+    NodeJS: true,
+  },
   parserOptions: {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
@@ -9,7 +12,7 @@ module.exports = {
     semi: 'off',
     'babel/semi': 'error',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/naming-convention': [
       'error',
       {
