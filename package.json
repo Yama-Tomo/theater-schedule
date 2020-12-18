@@ -24,12 +24,12 @@
     "@nuxtjs/google-analytics": "2.4.0",
     "@nuxtjs/sitemap": "2.4.0",
     "bulma": "0.9.1",
-    "nuxt": "2.14.11",
+    "nuxt": "2.14.12",
     "nuxt-property-decorator": "2.8.8",
     "vuex-type-helper": "1.2.2"
   },
   "devDependencies": {
-    "@nuxt/types": "2.14.11",
+    "@nuxt/types": "2.14.12",
     "@nuxt/typescript-build": "2.0.3",
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/eslint-config-typescript": "5.0.0",
