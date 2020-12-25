@@ -34,7 +34,7 @@
     "@nuxt/typescript-runtime": "2.0.0",
     "@nuxtjs/eslint-config-typescript": "5.0.0",
     "@types/hard-source-webpack-plugin": "1.0.1",
-    "@types/lodash": "4.14.165",
+    "@types/lodash": "4.14.166",
     "eslint": "7.15.0",
     "eslint-config-prettier": "7.0.0",
     "eslint-plugin-babel": "5.3.1",
