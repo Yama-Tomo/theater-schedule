@@ -43,7 +43,7 @@
     "husky": "4.3.8",
     "json-loader": "0.5.7",
     "lint-staged": "10.5.4",
-    "node-sass": "5.0.0",
+    "node-sass": "6.0.0",
     "pug": "3.0.1",
     "pug-plain-loader": "1.1.0",
     "sass-loader": "10.1.1",
