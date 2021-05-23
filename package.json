@@ -47,7 +47,7 @@
     "pug": "3.0.1",
     "pug-plain-loader": "1.1.0",
     "sass-loader": "10.1.1",
-    "ts-loader": "7.0.5",
+    "ts-loader": "9.2.2",
     "ts-node": "9.1.1",
     "typescript": "4.1.5",
     "yaml-loader": "0.6.0"
