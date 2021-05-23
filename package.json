@@ -8,12 +8,8 @@
     "gen": "nuxt-ts generate",
     "build": "nuxt-ts build && tsc -p tsconfig.nuxt-config.json",
     "start": "nuxt start -c .nuxt/ts-compiled/nuxt.config.js",
-    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && yarn gen"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "build:netlify": "wget -O - $SCHEDULES_DATA_ENDPOINT > src/data/schedules.json && yarn gen",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
