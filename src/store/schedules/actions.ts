@@ -1,8 +1,8 @@
-import { ActionContext } from '@/types/store';
-import { RootState } from '@/store/module_mapper';
 import type { ActionTree } from 'vuex';
 import { initialStateResolver, State } from './state';
 import mutations from './mutations';
+import { ActionContext } from '@/types/store';
+import { RootState } from '@/store/module_mapper';
 
 type Context = ActionContext<State, typeof mutations, RootState>;
 

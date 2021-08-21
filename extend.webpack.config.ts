@@ -14,12 +14,12 @@ export default (config: Configuration) => {
     });
 
     // NOTE: nuxtが生成するルールだとbabelを通してしまうので tsはbabelを通さない
-    const tsRule = config.module.rules.find(rule => {
+    const tsRule = config.module.rules.find((rule) => {
       return rule.test ? rule.test.toString() === '/\\.ts$/i' : false;
     });
 
     if (tsRule !== undefined && tsRule.use) {
-      tsRule.use = (tsRule.use as RuleSetUseItem[]).filter(loader => {
+      tsRule.use = (tsRule.use as RuleSetUseItem[]).filter((loader) => {
         const loaderName = (loader as RuleSetLoader).loader;
         return loaderName !== undefined
           ? !/babel-loader/.test(loaderName)
@@ -35,7 +35,7 @@ export default (config: Configuration) => {
           __dirname,
           '/node_modules/.cache/hard-source/[confighash]'
         ),
-        configHash: webpackConfig =>
+        configHash: (webpackConfig) =>
           defaultConfigHash(webpackConfig) + '-' + process.env.NODE_ENV,
       })
     );
