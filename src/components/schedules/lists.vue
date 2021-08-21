@@ -38,14 +38,14 @@ export default class extends Vue {
     const toFilterWord = (str: string) =>
       str.toLowerCase().replace(/\/| |・|／/g, '');
 
-    return this.state.schedules.filter(schedule => {
+    return this.state.schedules.filter((schedule) => {
       return (
         toFilterWord(schedule.name).includes(word) ||
         toFilterWord(schedule.theater).includes(word) ||
         toFilterWord(schedule.station).includes(word) ||
         (schedule.ticketsOnTheDay &&
           toFilterWord(schedule.ticketsOnTheDay).includes(word)) ||
-        schedule.actors.some(actor => toFilterWord(actor.name).includes(word))
+        schedule.actors.some((actor) => toFilterWord(actor.name).includes(word))
       );
     });
   }

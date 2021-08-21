@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { Route } from 'vue-router';
+import type { Route } from 'vue-router';
 import { Context as OrgContext } from '@nuxt/types';
 
 export namespace Nuxt {
