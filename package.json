@@ -27,7 +27,7 @@
   "devDependencies": {
     "@nuxt/types": "2.15.8",
     "@nuxt/typescript-build": "2.1.0",
-    "@nuxtjs/eslint-config-typescript": "6.0.1",
+    "@nuxtjs/eslint-config-typescript": "9.0.0",
     "@types/hard-source-webpack-plugin": "1.0.3",
     "@types/lodash": "4.14.172",
     "eslint": "7.32.0",
