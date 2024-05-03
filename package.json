@@ -30,7 +30,7 @@
     "@nuxtjs/eslint-config-typescript": "6.0.1",
     "@types/hard-source-webpack-plugin": "1.0.3",
     "@types/lodash": "4.14.172",
-    "eslint": "7.32.0",
+    "eslint": "9.2.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-prettier": "3.4.1",
